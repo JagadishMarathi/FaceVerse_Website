@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FaceVerse - 2D to 3D Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">FaceVerse</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="auth/login.html">Login</a></li>
+      <li><a href="auth/signup.html">Signup</a></li>
+      <li><a href="auth/profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to FaceVerse</h1>
+      <p>Convert 2D Images to 3D Models, Generate 3D Videos, and More</p>
+      <a href="#tools" class="cta-button">Try the Converter</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-box">
+        <h3>2D to 3D Conversion</h3>
+        <p>Convert face, body, object, and scene images to 3D.</p>
+      </div>
+      <div class="feature-box">
+        <h3>3D Image Creation</h3>
+        <p>Generate artistic or realistic 3D images using AI models.</p>
+      </div>
+      <div class="feature-box">
+        <h3>3D Video Generation</h3>
+        <p>Animate your 3D objects into cinematic videos.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Real-Time Viewer</h3>
+        <p>Preview 3D models interactively using WebGL.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools" id="tools">
+    <h2>2D to 3D Converter</h2>
+    <div class="tool-card">
+      <form id="upload-form" enctype="multipart/form-data">
+        <label for="image-upload" class="drop-area">
+          <span>Drag & Drop or Click to Upload</span>
+          <input type="file" id="image-upload" name="image" accept="image/*" required />
+        </label>
+        <label for="conversion-type">Select Conversion Type:</label>
+        <select id="conversion-type" name="type">
+          <option value="face">Face</option>
+          <option value="body">Body</option>
+          <option value="object">Object</option>
+          <option value="scene">Scene</option>
+        </select>
+        <button type="submit">Convert</button>
+      </form>
+
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div class="preview-box">
+        <div class="image-preview">
+          <h3>2D Image</h3>
+          <img id="original-image" src="" alt="Original Image" />
+        </div>
+        <div class="model-preview">
+          <h3>3D Model</h3>
+          <div id="three-container">3D View Will Appear Here</div>
+        </div>
+      </div>
+
+      <div class="download-buttons">
+        <a id="download-obj" href="#" download>Download .OBJ</a>
+        <a id="download-jpg" href="#" download>Download .JPG</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About FaceVerse</h2>
+    <p>FaceVerse is an AI-based platform to elevate visual creativity through 2D-to-3D conversion and immersive content generation.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FaceVerse. All rights reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- auth/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signup - FaceVerse</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <section class="auth-section">
+    <h2>Signup</h2>
+    <form id="signup-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Signup</button>
+    </form>
+    <p id="signup-message" style="margin-top:1rem;"></p>
+  </section>
+
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("signup-message").innerText =
+        "✅ Signup successful! Now you can login.";
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
